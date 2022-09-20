@@ -121,9 +121,10 @@ public function register()
 		$this->load->view('admin/part/registrasi', $data);
 	else :
 		$params = [
-			'username'			=> htmlspecialchars($this->input->post('nik',TRUE)),
+			'username'			=> htmlspecialchars($this->input->post('username',TRUE)),
 			'nama'			=> htmlspecialchars($this->input->post('nama',TRUE)),
 			'birth'		=> htmlspecialchars($this->input->post('username',TRUE)),
+			
 			'password'		=> password_hash(htmlspecialchars($this->input->post('password',TRUE)), PASSWORD_DEFAULT),
 			'telp'			=> htmlspecialchars($this->input->post('telp',TRUE)),
 			'foto_profile'	=> 'user.png',

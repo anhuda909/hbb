@@ -46,10 +46,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- Form Group (email address)            -->
+                                        <!-- Form Group (email address)-->
                                         <div class="mb-3">
                                             <label class="small mb-1" for="inputEmailAddress">Email</label>
                                             <input class="form-control" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
+                                        </div>
+                                        <!-- Form Group (birth)-->
+                                        <div class="mb-3">
+                                            <label class="small mb-1" for="inputEmailAddress">Birth</label>
+                                            <input class="form-control" id="inputEmailAddress" type="date" aria-describedby="emailHelp" placeholder="Enter email address" />
                                         </div>
                                         <!-- Form Row    -->
                                         <div class="row gx-3">
