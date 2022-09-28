@@ -6,10 +6,19 @@ class C_user extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('user/header');
-		$this->load->view('user/index');
-		$this->load->view('user/footer');
+		$this->load->view('user/part_/home1');
 	}
+
+	public function home()
+	{
+		$this->load->view('user/part_/home2');
+	}
+
+	public function home2()
+	{
+		$this->load->view('user/part_/home3');
+	}
+
 
 	public function login()
 	{

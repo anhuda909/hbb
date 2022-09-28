@@ -122,12 +122,12 @@ public function register()
 	else :
 		$params = [
 			'username'			=> htmlspecialchars($this->input->post('username',TRUE)),
-			'nama'			=> htmlspecialchars($this->input->post('nama',TRUE)),
-			'birth'		=> htmlspecialchars($this->input->post('username',TRUE)),
-			
+			'name'			=> htmlspecialchars($this->input->post('name',TRUE)),
+			'birth'		=> htmlspecialchars($this->input->post('birth',TRUE)),
+			'role'	=> 'user',
+			'conf_pass' => password_hash(htmlspecialchars($this->input->post('conf_pass',TRUE)), PASSWORD_DEFAULT),
 			'password'		=> password_hash(htmlspecialchars($this->input->post('password',TRUE)), PASSWORD_DEFAULT),
-			'telp'			=> htmlspecialchars($this->input->post('telp',TRUE)),
-			'foto_profile'	=> 'user.png',
+			
 		];
 
 		$resp = $this->registrasi->create($params);

@@ -28,6 +28,10 @@
                                 </div>
                                 <div class="card-body">
                                     <!-- Registration form-->
+                                    <?= validation_errors('<div class="alert alert-danger alert-dismissible fade show" role="alert">', '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>') ?>
+                                    <?= $this->session->flashdata('msg'); ?>
+                                    <?= form_open('C_login/register', 'class ="user"'); ?>
                                     <form>
                                         <!-- Form Row-->
                                         <div class="row gx-3">
@@ -35,26 +39,26 @@
                                                 <!-- Form Group (first name)-->
                                                 <div class="mb-3">
                                                     <label class="small mb-1" for="inputFirstName">Full Name</label>
-                                                    <input class="form-control" id="inputFirstName" type="text" placeholder="Enter full name" />
+                                                    <input class="form-control" id="name" name="name" type="text" placeholder="Enter full name" value="<?= set_value('name') ?>" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <!-- Form Group (last name)-->
                                                 <div class="mb-3">
                                                     <label class="small mb-1" for="inputLastName">Username</label>
-                                                    <input class="form-control" id="inputLastName" type="text" placeholder="Enter Username" />
+                                                    <input class="form-control" id="username" name="username" type="text" placeholder="Enter Username" value="<?= set_value('username') ?>" />
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Form Group (email address)-->
                                         <div class="mb-3">
                                             <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                            <input class="form-control" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
+                                            <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email address" />
                                         </div>
                                         <!-- Form Group (birth)-->
                                         <div class="mb-3">
                                             <label class="small mb-1" for="inputEmailAddress">Birth</label>
-                                            <input class="form-control" id="inputEmailAddress" type="date" aria-describedby="emailHelp" placeholder="Enter email address" />
+                                            <input class="form-control" id="birth" name="birth" type="date" aria-describedby="emailHelp" placeholder="Enter email address" />
                                         </div>
                                         <!-- Form Row    -->
                                         <div class="row gx-3">
@@ -62,19 +66,21 @@
                                                 <!-- Form Group (password)-->
                                                 <div class="mb-3">
                                                     <label class="small mb-1" for="inputPassword">Password</label>
-                                                    <input class="form-control" id="inputPassword" type="password" placeholder="Enter password" />
+                                                    <input class="form-control" id="password" name="password" type="password" placeholder="Enter password" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <!-- Form Group (confirm password)-->
                                                 <div class="mb-3">
                                                     <label class="small mb-1" for="inputConfirmPassword">Confirm Password</label>
-                                                    <input class="form-control" id="inputConfirmPassword" type="password" placeholder="Confirm password" />
+                                                    <input class="form-control" id="confir_pass" name="confir_pass" type="password" placeholder="Confirm password" />
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Form Group (create account submit)-->
-                                        <a class="btn btn-primary btn-block" href="<?= base_url('C_login') ?>">Create Account</a>
+                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                            <button class="btn btn-primary" type="submit">Create account</button>
+                                        </div>
                                     </form>
                                 </div>
                                 <div class="card-footer text-center">

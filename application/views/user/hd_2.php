@@ -49,7 +49,7 @@
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="<?= base_url('C_user/index') ?>">Home</a></li>
+                        <li><a class="nav-link scrollto active" href="<?= base_url('C_user/login') ?>">Home</a></li>
                         <li><a class="nav-link scrollto" href="<?= base_url('C_user/community') ?>">community</a></li>
                         <li><a class="nav-link scrollto" href="<?= base_url('C_user/cart') ?>">Cart</a></li>
                         <li class="dropdown"><a class="getstarted scrollto" href="#"><span>user</span></a>
